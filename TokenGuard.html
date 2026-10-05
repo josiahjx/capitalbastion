@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenGuard - Crypto Asset Recovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                    <span class="font-bold text-xl">TokenGuard</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-blue-200 transition">Services</a>
+                    <a href="#how-it-works" class="hover:text-blue-200 transition">How It Works</a>
+                    <a href="#about" class="hover:text-blue-200 transition">About</a>
+                    <a href="#testimonials" class="hover:text-blue-200 transition">Success Stories</a>
+                </div>
+                <button id="contactBtn" class="bg-white text-blue-800 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition">
+                    Contact Us
+                </button>
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#services" class="block py-2 hover:text-blue-200 transition">Services</a>
+                <a href="#how-it-works" class="block py-2 hover:text-blue-200 transition">How It Works</a>
+                <a href="#about" class="block py-2 hover:text-blue-200 transition">About</a>
+                <a href="#testimonials" class="block py-2 hover:text-blue-200 transition">Success Stories</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 slide-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Recover Your Lost Crypto Assets</h1>
+                <p class="text-xl mb-8 text-blue-100">TokenGuard specializes in recovering lost, stolen, or inaccessible cryptocurrency. Our team of blockchain experts has helped recover over $50M in digital assets.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button id="recoveryBtn" class="bg-yellow-400 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition pulse-animation">
+                        Start Recovery Process
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center slide-in">
+                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80" alt="Crypto Security" class="rounded-xl shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">$50M+</div>
+                    <div class="text-gray-600">Recovered Assets</div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">1,200+</div>
+                    <div class="text-gray-600">Successful Recoveries</div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">95%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Our Recovery Services</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">We specialize in various types of cryptocurrency recovery scenarios.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-key text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Lost Private Keys</h3>
+                    <p class="text-gray-600">Recover access to wallets when private keys are lost, damaged, or forgotten through advanced cryptographic techniques.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-lock text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hacked Accounts</h3>
+                    <p class="text-gray-600">Trace and recover funds stolen through phishing attacks, exchange hacks, or malware infections.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Wrong Transactions</h3>
+                    <p class="text-gray-600">Attempt recovery of funds sent to wrong addresses or incorrect networks through blockchain analysis.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hard-hat text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hardware Wallet Issues</h3>
+                    <p class="text-gray-600">Recover assets from damaged, lost, or malfunctioning hardware wallets using specialized techniques.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Exchange Recovery</h3>
+                    <p class="text-gray-600">Assist with recovering funds from defunct or frozen exchange accounts through legal channels.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-question-circle text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Other Scenarios</h3>
+                    <p class="text-gray-600">We handle complex recovery cases including inheritance, smart contract issues, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">How TokenGuard Works</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Our proven 4-step process maximizes your chances of successful recovery.</p>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1639762681483-3f67b25f2411?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Recovery Process" class="rounded-xl shadow-lg w-full max-w-md">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Initial Consultation</h3>
+                                <p class="text-gray-600">Share details of your situation through our secure portal. Our experts will assess recovery feasibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Recovery Plan</h3>
+                                <p class="text-gray-600">We create a customized recovery strategy with transparent pricing and success probability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Execution</h3>
+                                <p class="text-gray-600">Our team works diligently using advanced blockchain forensics and cryptographic methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">4</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Asset Return</h3>
+                                <p class="text-gray-600">Recovered assets are securely transferred to your designated wallet with full transparency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 p-8 rounded-xl max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold mb-4 text-center">Our No-Recovery, No-Fee Guarantee</h3>
+                <p class="text-gray-700 text-center">We only charge a fee if we successfully recover your assets. Initial consultations are always free with no obligation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Success Stories</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Don't just take our word for it. Here's what our clients say.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"After losing access to my hardware wallet with 12 BTC, I thought all was lost. TokenGuard recovered every last satoshi. Their expertise is unmatched."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <p class="text-gray-500 text-sm">San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I sent $85,000 worth of ETH to a wrong address. TokenGuard tracked it down and negotiated with the recipient to return 90% of my funds."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah L.</h4>
+                            <p class="text-gray-500 text-sm">New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"My father passed away with crypto assets and no instructions. TokenGuard helped navigate inheritance laws and recover his digital legacy."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">David R.</h4>
+                            <p class="text-gray-500 text-sm">Austin, TX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">About TokenGuard</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2018 by blockchain security experts, TokenGuard has become the leading cryptocurrency recovery service with a team of 25+ specialists including cryptographers, forensic analysts, and legal experts.</p>
+                    <p class="text-gray-600 mb-6">We combine cutting-edge technology with deep blockchain knowledge to solve the most challenging recovery cases while maintaining the highest standards of security and confidentiality.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Blockchain Forensics</div>
+                        <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Cryptography</div>
+                        <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Legal Expertise</div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Our Team" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Recover Your Assets?</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">Don't let lost crypto remain lost. Our experts are standing by to help.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button id="finalRecoveryBtn" class="bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transition">
+                    Start Free Consultation
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+                    <i class="fas fa-phone-alt mr-2"></i> (888) 555-TOKEN
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recovery Form Modal -->
+    <div id="recoveryModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+            <div class="gradient-bg text-white p-6">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold">Recovery Assessment</h3>
+                    <button id="closeModalBtn" class="text-white hover:text-blue-200">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="text-blue-100 mt-2">Complete this form to begin your recovery process</p>
+            </div>
+            <div class="p-6">
+                <form id="recoveryForm">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg input-focus focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg input-focus focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="issue" class="block text-gray-700 mb-2">Recovery Scenario</label>
+                        <select id="issue" class="w-full px-4 py-2 border rounded-lg input-focus focus:outline-none focus:border-blue-500">
+                            <option value="">Select your issue</option>
+                            <option value="lost_keys">Lost Private Keys</option>
+                            <option value="hacked">Hacked Account</option>
+                            <option value="wrong_tx">Wrong Transaction</option>
+                            <option value="hardware">Hardware Wallet Issue</option>
+                            <option value="exchange">Exchange Recovery</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="details" class="block text-gray-700 mb-2">Details</label>
+                        <textarea id="details" rows="4" class="w-full px-4 py-2 border rounded-lg input-focus focus:outline-none focus:border-blue-500" placeholder="Describe your situation in detail..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Submit Assessment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden text-center">
+            <div class="p-8">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-green-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Assessment Submitted!</h3>
+                <p class="text-gray-600 mb-6">Our team will review your case and contact you within 24 hours with our assessment and next steps.</p>
+                <button id="closeSuccessModal" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                        <span class="font-bold text-xl">TokenGuard</span>
+                    </div>
+                    <p class="text-gray-400">The leading cryptocurrency recovery service trusted by thousands worldwide.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Lost Key Recovery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hacked Account Recovery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Transaction Recovery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inheritance Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Success Stories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">help@tokenguard.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">(888) 555-TOKEN</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">San Francisco, CA</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 TokenGuard. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Handling
+        const recoveryBtn = document.getElementById('recoveryBtn');
+        const finalRecoveryBtn = document.getElementById('finalRecoveryBtn');
+        const contactBtn = document.getElementById('contactBtn');
+        const recoveryModal = document.getElementById('recoveryModal');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeSuccessModal = document.getElementById('closeSuccessModal');
+        const recoveryForm = document.getElementById('recoveryForm');
+
+        function openModal() {
+            recoveryModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            recoveryModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeSuccess() {
+            successModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        recoveryBtn.addEventListener('click', openModal);
+        finalRecoveryBtn.addEventListener('click', openModal);
+        contactBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        closeSuccessModal.addEventListener('click', closeSuccess);
+
+        // Close modal when clicking outside
+        recoveryModal.addEventListener('click', (e) => {
+            if (e.target === recoveryModal) {
+                closeModal();
+            }
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                closeSuccess();
+            }
+        });
+
+        // Form Submission
+        recoveryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your server
+            // For this demo, we'll just show the success modal
+            
+            closeModal();
+            successModal.classList.remove('hidden');
+            
+            // Reset form
+            recoveryForm.reset();
+        });
+
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.slide-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animation
+        document.querySelectorAll('.slide-in').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        });
+
+        // Run animation check on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
