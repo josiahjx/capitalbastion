@@ -105,7 +105,7 @@ export default function ServicesPage() {
           <div className="w-full text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Vision & Mission</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-              At CapitalBastionForensics, we believe that no one should lose access to their digital wealth due to technical issues, 
+              At CapitalBastion, we believe that no one should lose access to their digital wealth due to technical issues, 
               human error, or malicious attacks. Our mission is to provide hope and solutions when all seems lost.
             </p>
             <div className="flex flex-col md:flex-row justify-between gap-8 mt-12 w-[100%]">

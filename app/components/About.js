@@ -17,7 +17,7 @@ export default function About() {
             Forensics, cryptography, and legal follow-through
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-muted">
-            CapitalBastion Forensics was founded by blockchain security specialists. The team includes forensic analysts,
+            CapitalBastion was founded by blockchain security specialists. The team includes forensic analysts,
             cryptographers, and legal operators who work the same case from tracing through recovery.
           </p>
           <p className="mt-4 text-[16px] leading-relaxed text-muted">

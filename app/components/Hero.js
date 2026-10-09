@@ -9,7 +9,7 @@ export default function Hero() {
           Cryptocurrency tracing, forensic investigations, and recovery support
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-          CapitalBastion Forensics traces lost and stolen cryptocurrency across wallets and chains.
+          CapitalBastion traces lost and stolen cryptocurrency across wallets and chains.
           We combine forensic analysis, recovery planning, and coordination with exchanges and counsel
           from the first assessment through the close of the case.
         </p>

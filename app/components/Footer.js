@@ -31,15 +31,15 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold tracking-wide text-white">Offices</h4>
           <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/65">
-            <li>New York · London</li>
-            <li>Singapore · Dubai</li>
-            <li>help@CapitalBastionforensics.com</li>
+            <li>4401 CLOVER DR CHARLESTON WV 25306-6757 USA</li>
+            <li>+1(304)871-8392</li>
+            <li>support@CapitalBastion.com</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="site-wrap flex flex-col gap-3 py-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} CapitalBastion Forensics. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} CapitalBastion. All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
             <Link href="/privacy" className="hover:text-white">Terms of Service</Link>

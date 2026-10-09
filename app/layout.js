@@ -11,13 +11,13 @@ import Footer from "./components/Footer";
 
 // Tawk.to → Administration → Channels → Chat Widget
 // Embed URL: https://embed.tawk.to/PROPERTY_ID/WIDGET_ID
-const TAWK_PROPERTY_ID = "";
-const TAWK_WIDGET_ID = "";
+const TAWK_PROPERTY_ID = "6ac92ed21ce21434c5ca1b8a";
+const TAWK_WIDGET_ID = "1k4gttqkm";
 
 export const metadata = {
-  title: "CapitalBastion Forensics — Crypto Recovery & Blockchain Investigation",
+  title: "CapitalBastion — Crypto Recovery & Blockchain Investigation",
   description:
-    "CapitalBastion Forensics traces and recovers lost or stolen cryptocurrency. Blockchain forensics, asset tracing, and recovery support for complex cases.",
+    "CapitalBastion traces and recovers lost or stolen cryptocurrency. Blockchain forensics, asset tracing, and recovery support for complex cases.",
 };
 
 export default function RootLayout({ children }) {
